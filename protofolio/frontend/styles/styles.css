@@ -1,0 +1,409 @@
+body {
+	background: linear-gradient(to bottom, #243e5b, #008080);
+	font-family: Arial, sans-serif;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+	width: 100vw;
+	box-sizing: border-box;
+	background-color: #ffffff;
+}
+
+header {
+	position: relative; /* To position the dropdown relative to the header */
+	width:auto;
+	background-color: transparent;
+	color: #fff;
+	padding: 150px 0;
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+	transform: translate(3%, -400%);
+}
+
+header h2 {
+	margin: 15px;
+	font-size: 2em;
+	color:#f0f0f0;
+	transform: translate(3%, -550%);
+	text-align: center;
+	font-weight: lighter;
+}
+header	h3 {
+	margin: 0;
+	font-size: 3em;
+}
+
+header	h4 {
+	margin: 10px;
+	font-size: 1.1em;
+	font-style: italic;
+}
+
+header h6 {
+	font-size: 1.4em;
+	font-style: italic;
+	transform: translate(0%, -100%);
+}
+
+nav {
+	margin-top: 100px;
+}
+
+nav a {
+	color: #fff;
+	margin: 0 15px;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.section {
+	padding: 40px;
+	color: #ffffff;
+	max-width: 1000px;
+	margin: auto;
+	}
+.section l {
+	transform: translate(0%, -700%);
+	font-size: 1.5em;
+}	
+#projects {
+	background-color: transparent;
+}
+
+#projects-container {
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	justify-content: center; 
+	align-items: center; 
+}
+
+.project-card {
+	background-color: #333;
+	color: #ffffff;
+	padding: 20px;
+	margin: 15px;
+	width: calc(50% - 30px); 
+	box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	position: relative; 
+	overflow: hidden;
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: center; 
+ }
+ 
+.project-card:hover {
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+	height: auto; 
+}
+
+.project-header {
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	width: 100%; 
+ }
+
+ .project-title {
+	font-weight: bold;
+	color: #007bff;
+	text-align: center; 
+	text-decoration: none;
+	width: auto; 
+ }
+
+.toggle-description {
+	font-size: 1.5rem; 
+	cursor: pointer;
+	background: none; 
+	border: none; 
+	color: #007bff; 
+	transition: transform 0.3s ease; 
+}
+
+.project-description {
+  margin-top: 10px; 
+  display: none; 
+  transition: opacity 0.3s ease; 
+  opacity: 0; 
+  text-align: center; 
+}
+
+.project-description.show {
+	display: block; 
+	opacity: 1; 
+}
+
+
+.project-card:hover .project-description {
+	display: block; 
+	opacity: 1; 
+}
+
+
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color: #222;
+	color: #ccc;
+}
+
+.profile-picture {
+	width: 350px;
+	height: 350px;
+	border-radius: 75%;
+	margin-right: 0px;
+	transform: translate(-75%, 15%);
+	object-fit: cover;
+}
+
+.dropdown-btn {
+	background-color: transparent;
+	border: none;
+	color: #243e5b;
+	font-size: 30px; /* Adjust size as needed */
+	cursor: pointer;
+	position: fixed;
+	top: 20px; /* Adjust to position it in the corner */
+	right: 20px; /* Adjust to position it in the corner */
+	z-index: 10; /* Ensure it's above other elements */
+	}
+	
+	
+	.dropdown-content {
+	z-index: 5;
+	/* background: linear-gradient(to left, #243e5b, #008080); */
+	position: fixed;
+	/* background-color: #333; Set a visible background color */
+	min-width: 160px;/* Add a shadow for depth */
+	right: 0; /* Align the right edge of dropdown with the button */
+	top: 0px; /* Position it just below the button */
+	transform: translateX(100%); /* Start off-screen to the left */
+	opacity: 0; /* Initially invisible */
+	transition: transform 0.5s ease, opacity 0.5s ease; /* Adjust duration to 0.5s */
+	visibility: hidden; /* Hidden by default */
+}
+
+/* Show the dropdown content */
+.dropdown-content.show {
+	visibility: visible; /* Make it visible */
+	transform: translateX(0); /* Move it into view from the left */
+	opacity: 1; /* Fade it in */
+}
+.dropdown-content a {
+	color: linear-gradient(to right, #243e5b, #00BFAE);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: rgba(255, 255, 255, 0.1); /* Change color on hover */
+}
+
+/* Show the dropdown content */
+table {
+	width: 100%; /* Make the table full-width */
+	border-collapse: collapse; /* Merge borders */
+}
+
+th, td {
+	padding: 10px; /* Add padding for cells */
+	text-align: left; /* Align text to the left */
+	border-bottom: 1px solid #9e0000; /* Add a border at the bottom */
+	background-color: #333;
+}
+
+th {
+	background-color: #333; /* Background for header */
+	color: #fff; /* Text color for header */
+}
+.skills-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px; /* Adjust the spacing as needed */
+}
+
+.skills-table th,
+.skills-table td {
+	border: 1px solid #ffffff; /* Light gray border */
+	padding: 10px;
+	text-align: left; /* Align text to the left */
+	color: #ffffff; /* Set the font color to white */
+	background-color: #333; /* Set the same background color for all rows */
+}
+
+.skills-table th {
+	background-color: #333; /* Dark background for header */
+	color: #ffffff; /* White text for header */
+}
+
+.skills-table tr:nth-child(even) {
+	background-color: #333; /* Dark background for header */
+}
+
+.skills-table tr:hover {
+	background-color: #444; /* Slightly lighter background on hover */
+}
+
+.skills-container {
+	display: flex;
+	flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+	justify-content: center; /* Center the skill items */
+	align-items: center; /* Align skill items vertically */
+	gap: 20px; /* Adds spacing between the skill items */
+	background-color: #333; /* Background color for the whole rectangle */
+	padding: 40px; /* Add padding inside the container */
+	border-radius: 10px; /* Rounded corners */
+	max-width: 1800px; /* Limit the width */
+	margin: 0 auto; /* Center the container */
+}
+
+.skill {
+	text-align: center;
+	color: #fff; /* Set font color to white */
+	flex-basis: 200px; /* Control the width of each skill block */
+}
+
+.skill img {
+	width: 60px; /* Adjust the size of the skill logo */
+	height: 60px;
+	margin-bottom: 10px;
+}
+
+.skill p {
+	font-size: 1.2em; /* Adjust font size for the skill names */
+	margin: 0;
+}
+
+.social-icons {
+	display: flex; /* Use flexbox for layout */
+	align-items: center; /* Center icons vertically */
+	gap: 20px; /* Space between icons */
+}
+
+.social-icon {
+	font-size: 40px; /* Increase icon size */
+	color: #ffffff; /* Icon color */
+	transition: transform 0.3s; /* Smooth scale transition */
+}
+
+.social-icon:hover {
+	transform: scale(1.1); /* Scale up on hover */
+}
+
+.contact-button {
+	background-color: #007bff; /* Button background color */
+	color: #fff; /* Button text color */
+	padding: 10px 20px; /* Padding for the button */
+	border: none; /* Remove border */
+	border-radius: 25px; /* Oval shape */
+	text-decoration: none; /* Remove underline */
+	font-size: 16px; /* Button font size */
+	transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.contact-button:hover {
+	background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+.modal {
+	position: fixed; /* Stay in place */
+	color: white;
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 200px; /* Full width */
+	height: 300px; /* Full height */
+	/* overflow: auto; Enable scroll if needed */
+	background-color: rgba(0,0,0); /* Black w/ opacity */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+	background-color: #222 !important;
+	margin: 15% auto; 
+	padding: 20px;
+	border: 1px solid #888;
+	width: 25% !important; /* Could be more or less, depending on screen size */
+	height: 40% !important;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#contactForm {
+	display: flex;
+	flex-direction: column;
+}
+
+#contactForm label {
+	margin: 10px 0 5px;
+}
+
+#contactForm input,
+#contactForm textarea {
+	#contactForm textarea {
+		padding: 5px;
+		font-size: 14px;
+		width: 90; /* Default width */
+		height: 150px; /* Default height */
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		resize: none; /* Allow resizing, but within the limits */
+		overflow: auto;
+  }
+}
+
+#contactForm button {
+	/* margin-top: 10px;
+	padding: 10px; */
+	background-color: teal;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#contactForm button:hover {
+	background-color: #3cdab2;
+}
+
+#message {
+	resize: none;
+	overflow: auto;
+	width: 90;
+	max-width: 90;
+}
+.download-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        background-color: #4CAF50; /* Green */
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+.download-btn:hover {
+        background-color: #45a049; /* Darker green on hover */
+}
