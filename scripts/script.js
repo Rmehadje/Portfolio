@@ -155,7 +155,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e){
     message: message,
   };
 
-  emailjs.send(serviceid, templatekey, name, message);
+  emailjs.send(serviceid, templatekey, templateParams);
 });
 
 
