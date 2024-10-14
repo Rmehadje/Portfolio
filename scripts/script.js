@@ -156,6 +156,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e){
   };
 
   emailjs.send(serviceid, templatekey, templateParams);
+  modal.style.display = "none";
 });
 
 
