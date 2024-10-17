@@ -360,7 +360,6 @@ th {
 
 #contactForm input,
 #contactForm textarea {
-	#contactForm textarea {
 		padding: 5px;
 		font-size: 14px;
 		width: 90; /* Default width */
@@ -369,7 +368,6 @@ th {
 		border-radius: 5px;
 		resize: none; /* Allow resizing, but within the limits */
 		overflow: auto;
-  }
 }
 
 #contactForm button {

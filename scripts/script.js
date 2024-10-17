@@ -47,6 +47,13 @@ fetch(`https://api.github.com/users/${username}/repos`, {
           .map(line => line.replace(/\*/g, ''))
           .slice(2, 3)
           .join(' ');
+      } else if (repo.name === "Cub3D") {
+        description = readmeContent
+          .split('\n')
+          .filter(line => line.trim() !== '')
+          .map(line => line.replace(/^\d+\s*-\s*|\*/g, ''))
+          .slice(2, 3)
+          .join(' ');
       } else if (repo.name === "Push_Swap") {
         description = readmeContent
           .split('\n')
@@ -156,7 +163,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e){
   };
 
   emailjs.send(serviceid, templatekey, templateParams);
-  modal.style.display = "none";
+  // modal.style.display = "none";
 });
 
 
