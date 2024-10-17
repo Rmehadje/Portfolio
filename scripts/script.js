@@ -51,7 +51,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
         description = readmeContent
           .split('\n')
           .filter(line => line.trim() !== '')
-          .slice(2, 5)
+          .slice(1, 4)
           .join(' ');
       } else if (repo.name === "Push_Swap") {
         description = readmeContent
