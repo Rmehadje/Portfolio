@@ -51,9 +51,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
         description = readmeContent
           .split('\n')
           .filter(line => line.trim() !== '')
-          .map(line => line.replace(/^\d+\s*-\s*Introduction:\s*/, ''))
-          .map(line => line.replace(/^\d+\s*-\s*|\*/g, ''))
-          .slice(2, 3)
+          .slice(3, 4)
           .join(' ');
       } else if (repo.name === "Push_Swap") {
         description = readmeContent
