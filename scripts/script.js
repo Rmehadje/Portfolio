@@ -47,7 +47,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
           .map(line => line.replace(/\*/g, ''))
           .slice(2, 3)
           .join(' ');
-      } else if (repo.name === "Cub3D") {
+      } else if (repo.name === "Inception") {
         description = readmeContent
           .split('\n')
           .filter(line => line.trim() !== '')
